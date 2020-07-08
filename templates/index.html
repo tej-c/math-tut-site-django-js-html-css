@@ -1,0 +1,108 @@
+{% load static %}
+
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MATH BUSTER</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'main.css' %}" />
+	</head>
+	<style>
+		#bg:after{
+			background-image: url("{% static 'images/bgg.jpg' %}") !important;
+		}
+	</style>
+
+	{% if message %}
+		<script type="text/javascript">
+			alert("{{message}}");
+		</script>
+	{% endif %}
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+
+						<div class="content">
+							<div class="inner">
+								<h1> MATH BUSTER </h1>
+								<p>welcome</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="topics">Topics</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact & Subscribe</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="{% static 'images/pic03.jpg' %}" alt="" /></span>
+								<p>Our names are <strong><i style="color: #00ccff;">Gourav Tej, Eswar, Preethi, Yamini</i></strong>. We're a 20-year-old South Indian design students with a tech sort of background and a lot to say about the trends and direction of the contemporary design
+									world.</p>
+								<p>We wanted to be an engineer for most of our life. By the time we changed our mind about that, our liaison with the applied sciences had drastically altered our worldview already. This still informs much of our work and work ethic - design is no less
+									of a science in our eyes than physics or computing. (In other words, we like design as long as we can be a nerd about it.)</p>
+									<p>This site is all about <strong><i style="color: #00ccff;">math</i></strong>. We take you through it, right from the basics and some advanced topics with some examples and ample amounts of practice problems. Organised in a good manner, this site is very helpful if you are just starting off with math. Make sure you start from the basics and go up the level. <strong><i style="color: #00ccff;">Enjoy!</i></strong></p>
+								</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact & Subscribe</h2>
+								<form method="post" action="/">
+									{% csrf_token %}
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<div class="subtext coll">
+									<a>Twitter</a> | <a>Tumblr</a> | <a>Codepen</a> | <a>Behance</a>
+								</div><br>
+							</article> 
+					</div>
+							<footer id="footer">
+								<p class="copyright">&copy; Design: Team MB.</p>
+							</footer>
+
+
+			</div>
+
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="{% static 'main.js' %}"></script>
+
+	</body>
+</html>
