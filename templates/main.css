@@ -86,6 +86,7 @@ input, select, textarea {
 	p {
 		margin: 0 0 2rem 0;
 		font-weight: 500;
+		font-size: x-large !important;
 	}
 	h1, h2{
 		color: #ffffff;
